@@ -22,11 +22,6 @@ export class EmpresasController {
     return this.empresasService.findOne(+id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateEmpresaDto: UpdateEmpresaDto) {
-    return this.empresasService.update(+id, updateEmpresaDto);
-  }
-
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.empresasService.remove(+id);
