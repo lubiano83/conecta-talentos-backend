@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestjs/common';
 import { OfertasLaboralesService } from './ofertas-laborales.service';
 import { CreateOfertasLaboraleDto } from './dto/create-ofertas-laborale.dto';
 import { UpdateOfertasLaboraleDto } from './dto/update-ofertas-laborale.dto';
@@ -13,8 +13,8 @@ export class OfertasLaboralesController {
   }
 
   @Get()
-  findAll() {
-    return this.ofertasLaboralesService.findAll();
+  findAll(@Query('empresa') empresa?: string, @Query('estado') estado?: string) {
+    return this.ofertasLaboralesService.findAll(empresa, estado);
   }
 
   @Get(':id')
