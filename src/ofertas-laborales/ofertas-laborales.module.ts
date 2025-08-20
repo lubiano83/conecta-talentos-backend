@@ -6,6 +6,7 @@ import { EmpresasModule } from 'src/empresas/empresas.module';
 @Module({
   controllers: [OfertasLaboralesController],
   providers: [OfertasLaboralesService],
-  imports: [EmpresasModule]
+  imports: [EmpresasModule],
+  exports: [OfertasLaboralesService]
 })
 export class OfertasLaboralesModule {}

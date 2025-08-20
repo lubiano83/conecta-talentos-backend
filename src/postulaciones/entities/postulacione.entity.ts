@@ -14,16 +14,15 @@ export class Postulacione {
     estudiante: Estudiante;
 
     @ApiProperty()
-    estado: Resultado
+    estado: Resultado;
 
     constructor(
         id: number,
-        fechaPostulacion: Date,
         estudiante: Estudiante,
         estado: Resultado
     ) {
         this.id = id;
-        this.fechaPostulacion = fechaPostulacion;
+        this.fechaPostulacion = new Date();
         this.estudiante = estudiante;
         this.estado = estado;
     };
