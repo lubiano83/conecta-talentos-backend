@@ -33,23 +33,21 @@ export class OfertasLaborale {
 
     constructor(
         id: number,
-        fechaCreacion: Date,
         descripcion: string,
         cargo: string,
         region: string,
         tipo: Trabajos,
         estado: boolean,
-        empresa: string,
-        postulaciones: Postulacione[]
+        empresa: string
     ) {
         this.id = id;
-        this.fechaCreacion = fechaCreacion;
+        this.fechaCreacion = new Date();
         this.descripcion = descripcion;
         this.cargo = cargo;
         this.region = region;
         this.tipo = tipo;
         this.estado = estado;
         this.empresa = empresa;
-        this.postulaciones = postulaciones;
+        this.postulaciones = [];
     };
 };
